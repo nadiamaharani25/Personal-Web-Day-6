@@ -49,7 +49,6 @@ function addBlog() {
         btnShow: btnShow,
         icon: icon,
         images: images,
-
         postedAt: new Date(),
     }
 
@@ -274,22 +273,6 @@ function renderBlog() {
 }
 
 
-let month = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December'
-]
-
-
 function getDuration(dates1, dates2) {
 
     let duration = dates2 - dates1 // miliseconds
@@ -310,20 +293,6 @@ function getDuration(dates1, dates2) {
     }
 }
 
-
-function getFullTime(time) {
-    let date = time.getDate()
-    let monthIndex = time.getMonth()
-
-    let year = time.getFullYear()
-
-    let hours = time.getHours()
-    let minutes = time.getMinutes()
-
-    let fullTime = `${date} ${month[monthIndex]} ${year} ${hours}:${minutes} WIB`
-
-    return fullTime
-}
 
 function getDistanceTime(time) {
     let timeNow = new Date()
